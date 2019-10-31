@@ -71,6 +71,16 @@ app.get('/api/revenueByYear', (req, res) => {
     res.json(revenueByYear);
 });
 
+const revenueByCategory = widgets.reduce((acc, widget) => {
+    const category = widget.category;
+    acc[category] = acc[category] || 0;
+    acc[category] += widget.revenue;
+    return acc;
+}, {});
+app.get('/api/revenueByCategory', (req, res) => {
+    res.json(revenueByCategory);
+});
+
 const server = app.listen(3000, function () {
     console.log('Open browser to http://localhost:'+server.address().port+'/');
 });
