@@ -31,7 +31,12 @@
         const chart = new google.visualization.ColumnChart(element);
         whenRevenueByCategoryData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
-            chart.draw(dataTable);
+            chart.draw(dataTable, {
+                height: 400,
+                legend: 'none',
+                title: 'Total Revenue by Category',
+                width: 680
+            });
         });
     }
 
@@ -40,7 +45,12 @@
         const chart = new google.visualization.PieChart(element);
         whenRevenueByCategoryData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
-            chart.draw(dataTable);
+            chart.draw(dataTable, {
+                height: 400,
+                legend: 'right',
+                title: 'Total Revenue by Category',
+                width: 680
+            });
         });
     }
 
@@ -49,7 +59,14 @@
         const chart = new google.visualization.LineChart(element);
         whenRevenueByYearData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
-            chart.draw(dataTable);
+            chart.draw(dataTable, {
+                curveType: 'function',
+                height: 400,
+                legend: 'none',
+                pointsVisible: true,
+                title: 'Total Revenue by Year',
+                width: 680
+            });
         });
     }
 
