@@ -1,10 +1,38 @@
-<% if (__error) { %>
-    <%=__error%>
-<% } else { %>
-    <span>ID</span> <%=widget.id%>
-    <span>Name</span> <%=widget.name%>
-    <span>Description</span> <%=widget.description%>
-    <span>Category</span> <%=widget.category%>
-    <span>Revenue</span> $<%=widget.revenue%>
-    <span>Timestamp</span> <%=widget.timestamp%>
-<% } %>
+<div id="widget">
+    <% if (__error) { %>
+        <div class="error">
+            <%=__error%>
+        </div>
+    <% } else { %>
+        <h2 id="widget-name"><%=widget.name%> <span class="widget-id">id: <%=widget.id%></span></h2>
+        <p id="widget-description">
+            <%=widget.description%>
+        </p>
+        <table id="widget-details">
+            <tr>
+                <td class="label">
+                    Category
+                </td>
+                <td>
+                    <%=widget.category%>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Revenue
+                </td>
+                <td>
+                    <span class="money"><%=widget.revenue%></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    Timestamp
+                </td>
+                <td>
+                    <%=widget.timestamp%>
+                </td>
+            </tr>
+        </table>
+    <% } %>
+</div>

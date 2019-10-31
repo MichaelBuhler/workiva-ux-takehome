@@ -14,12 +14,12 @@ div.wrapper {
     width: 600px;
 }
 
-div#nav ul {
+div#header div#nav ul {
     list-style: none;
     padding: 0 8px;
 }
 
-div#nav ul li {
+div#header div#nav ul li {
     background-color: #dddddd;
     border-top: 3px solid #55bb00;
     border-top-left-radius: 6px;
@@ -29,12 +29,12 @@ div#nav ul li {
     padding: 8px 8px 4px;
 }
 
-div#nav ul li:hover {
+div#header div#nav ul li:hover {
     background-color: #e0e0e0;
     border-top: 3px solid #66cc00;
 }
 
-div#nav ul li.active {
+div#header div#nav ul li.active {
     background-color: #ffffff;
     border-top: 3px solid #66cc00;
 }

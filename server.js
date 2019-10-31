@@ -53,7 +53,7 @@ app.get('/widgets/:id', (req, res) => {
     if (widget) {
         res.render('widget', widget.name+' - Widgets', {widget});
     } else {
-        res.status(404).render('widget', 'Widget Not Found', null, 'No widget found with id `'+req.params.id+'`!');
+        res.status(404).render('widget', 'Not Found', null, 'No widget found with id `'+req.params.id+'`!');
     }
 });
 
