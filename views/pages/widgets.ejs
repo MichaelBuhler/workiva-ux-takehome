@@ -1,0 +1,10 @@
+<% for ( let i = 0 ; i < widgets.length ; i++ ) {
+    const widget = widgets[i];
+%>
+<div>
+    <%=widget.name%>
+    <%=widget.description%>
+    <span>Revenue:</span> $<%=widget.revenue%>
+    <%=widget.timestamp%>
+</div>
+<% } %>
