@@ -11,12 +11,14 @@ app.use('/img', express.static('static/img'));
 app.use('/js', express.static('static/js'));
 
 /*
- * Define wrapper for express's `res.render()`
+ * Define helper wrapper for express's `res.render()`
  */
 app.use((req, res, next) => {
     const resRender = res.render;
     res.render = (pageTemplate, pageTitle, data, error) => {
         data = data || {};
+
+        data.__js = data.__js || [];
 
         data.__error = error || '';
 
@@ -25,6 +27,7 @@ app.use((req, res, next) => {
             title: 'Workiva Widget Viewer',
             company: 'Workiva'
         };
+
         data.__page = {
             template: pageTemplate,
             title: pageTitle + ' - Workiva UX Takehome - Michael Buhler'
@@ -52,6 +55,20 @@ app.get('/widgets/:id', (req, res) => {
     } else {
         res.status(404).render('widget', 'Widget Not Found', null, 'No widget found with id `'+req.params.id+'`!');
     }
+});
+
+app.get('/revenue', (req, res) => {
+    res.render('revenue', 'Revenue', {__js:['https://www.gstatic.com/charts/loader.js']});
+});
+
+const revenueByYear = widgets.reduce((acc, widget) => {
+    const year = widget.timestamp.substring(0,4);
+    acc[year] = acc[year] || 0;
+    acc[year] += widget.revenue;
+    return acc;
+}, {});
+app.get('/api/revenueByYear', (req, res) => {
+    res.json(revenueByYear);
 });
 
 const server = app.listen(3000, function () {
