@@ -26,15 +26,6 @@
         return revenueByYearData;
     });
 
-    function renderRevenueByYearLineChart () {
-        const element = document.getElementById('revenueByYearLineChart');
-        const chart = new google.visualization.LineChart(element);
-        whenRevenueByYearData.then(data => {
-            const dataTable = google.visualization.arrayToDataTable(data);
-            chart.draw(dataTable);
-        });
-    }
-
     function renderRevenueByCategoryBarChart () {
         const element = document.getElementById('revenueByCategoryBarChart');
         const chart = new google.visualization.BarChart(element);
@@ -48,6 +39,15 @@
         const element = document.getElementById('revenueByCategoryPieChart');
         const chart = new google.visualization.PieChart(element);
         whenRevenueByCategoryData.then(data => {
+            const dataTable = google.visualization.arrayToDataTable(data);
+            chart.draw(dataTable);
+        });
+    }
+
+    function renderRevenueByYearLineChart () {
+        const element = document.getElementById('revenueByYearLineChart');
+        const chart = new google.visualization.LineChart(element);
+        whenRevenueByYearData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
             chart.draw(dataTable);
         });
