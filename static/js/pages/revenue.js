@@ -5,7 +5,7 @@
     google.charts.setOnLoadCallback(renderAllCharts);
 
     function renderAllCharts () {
-        renderRevenueByCategoryBarChart();
+        renderRevenueByCategoryColumnChart();
         renderRevenueByCategoryPieChart();
         renderRevenueByYearLineChart();
     }
@@ -26,9 +26,9 @@
         return revenueByYearData;
     });
 
-    function renderRevenueByCategoryBarChart () {
-        const element = document.getElementById('revenueByCategoryBarChart');
-        const chart = new google.visualization.BarChart(element);
+    function renderRevenueByCategoryColumnChart () {
+        const element = document.getElementById('revenueByCategoryColumnChart');
+        const chart = new google.visualization.ColumnChart(element);
         whenRevenueByCategoryData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
             chart.draw(dataTable);
