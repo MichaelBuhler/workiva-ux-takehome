@@ -2,7 +2,11 @@
 
     google.charts.load('current',{'packages':['corechart']});
 
-    google.charts.setOnLoadCallback(renderAll);
+    google.charts.setOnLoadCallback(renderAllCharts);
+
+    function renderAllCharts () {
+        renderRevenueByYearLineChart();
+    }
 
     const whenRevenueByYearData = ajax.get('/api/revenueByYear').then(revenueByYear => {
         const revenueByYearData = [['Year', 'Revenue']];
@@ -11,13 +15,8 @@
         });
         return revenueByYearData;
     });
-
-    function renderAll () {
-        renderRevenueByYear();
-    }
-
-    function renderRevenueByYear () {
-        const element = document.getElementById('revenueByYearChart');
+    function renderRevenueByYearLineChart () {
+        const element = document.getElementById('revenueByYearLineChart');
         const chart = new google.visualization.LineChart(element);
         whenRevenueByYearData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
