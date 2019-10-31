@@ -5,17 +5,10 @@
     google.charts.setOnLoadCallback(renderAllCharts);
 
     function renderAllCharts () {
-        renderRevenueByYearLineChart();
+        renderRevenueByCategoryBarChart();
         renderRevenueByCategoryPieChart();
+        renderRevenueByYearLineChart();
     }
-
-    const whenRevenueByYearData = ajax.get('/api/revenueByYear').then(revenueByYear => {
-        const revenueByYearData = [['Year', 'Revenue']];
-        Object.keys(revenueByYear).sort().forEach(year => {
-            revenueByYearData.push([year, revenueByYear[year]]);
-        });
-        return revenueByYearData;
-    });
 
     const whenRevenueByCategoryData = ajax.get('/api/revenueByCategory').then(revenueByCategory => {
         const revenueByCategoryData = [['Category', 'Revenue']];
@@ -25,10 +18,27 @@
         return revenueByCategoryData;
     });
 
+    const whenRevenueByYearData = ajax.get('/api/revenueByYear').then(revenueByYear => {
+        const revenueByYearData = [['Year', 'Revenue']];
+        Object.keys(revenueByYear).sort().forEach(year => {
+            revenueByYearData.push([year, revenueByYear[year]]);
+        });
+        return revenueByYearData;
+    });
+
     function renderRevenueByYearLineChart () {
         const element = document.getElementById('revenueByYearLineChart');
         const chart = new google.visualization.LineChart(element);
         whenRevenueByYearData.then(data => {
+            const dataTable = google.visualization.arrayToDataTable(data);
+            chart.draw(dataTable);
+        });
+    }
+
+    function renderRevenueByCategoryBarChart () {
+        const element = document.getElementById('revenueByCategoryBarChart');
+        const chart = new google.visualization.BarChart(element);
+        whenRevenueByCategoryData.then(data => {
             const dataTable = google.visualization.arrayToDataTable(data);
             chart.draw(dataTable);
         });
