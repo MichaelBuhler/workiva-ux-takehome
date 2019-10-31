@@ -11,7 +11,7 @@ body {
 
 div.wrapper {
     margin: 0 auto;
-    width: 600px;
+    width: 700px;
 }
 
 div#header div#nav ul {
@@ -31,12 +31,15 @@ div#header div#nav ul li {
 
 div#header div#nav ul li:hover {
     background-color: #e0e0e0;
-    border-top: 3px solid #66cc00;
 }
 
 div#header div#nav ul li.active {
     background-color: #ffffff;
     border-top: 3px solid #66cc00;
+}
+
+div#header div#nav ul li:hover {
+    border-top: 3px solid #77dd00;
 }
 
 div#content {
