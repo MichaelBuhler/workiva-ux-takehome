@@ -1,10 +1,12 @@
 <% for ( let i = 0 ; i < widgets.length ; i++ ) {
     const widget = widgets[i];
 %>
-<div>
-    <%=widget.name%>
-    <%=widget.description%>
-    <span>Revenue:</span> $<%=widget.revenue%>
-    <span>Timestamp:</span> <%=widget.timestamp%>
-</div>
+<a href="/widgets/<%=widget.id%>">
+    <div>
+        <%=widget.name%>
+        <%=widget.description%>
+        <span>Revenue:</span> $<%=widget.revenue%>
+        <span>Timestamp:</span> <%=widget.timestamp%>
+    </div>
+</a>
 <% } %>
