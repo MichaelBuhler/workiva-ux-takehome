@@ -1,0 +1,10 @@
+<% if (__error) { %>
+    <%=__error%>
+<% } else { %>
+    <span>ID</span> <%=widget.id%>
+    <span>Name</span> <%=widget.name%>
+    <span>Description</span> <%=widget.description%>
+    <span>Category</span> <%=widget.category%>
+    <span>Revenue</span> $<%=widget.revenue%>
+    <span>Timestamp</span> <%=widget.timestamp%>
+<% } %>
