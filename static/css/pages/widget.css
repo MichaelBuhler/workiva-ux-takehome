@@ -6,6 +6,10 @@ div#widget div.error {
     padding: 10px;
 }
 
+div#widget div#return-link {
+    float: right;
+}
+
 div#widget h2#widget-name span.widget-id {
     background-color: #eeeeee;
     font-family: monospace;

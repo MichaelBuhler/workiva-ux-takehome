@@ -4,6 +4,9 @@
             <%=__error%>
         </div>
     <% } else { %>
+        <div id="return-link">
+            <a href="/widgets">Return to Widget List</a>
+        </div>
         <h2 id="widget-name"><%=widget.name%> <span class="widget-id">id: <%=widget.id%></span></h2>
         <p id="widget-description">
             <%=widget.description%>
