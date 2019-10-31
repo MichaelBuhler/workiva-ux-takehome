@@ -1,3 +1,17 @@
-<div id="revenueByCategoryColumnChart"></div>
-<div id="revenueByCategoryPieChart"></div>
-<div id="revenueByYearLineChart"></div>
+<div id="revenue">
+    <div id="typeChooser">
+        <div id="revenueByYearLink" class="active" onclick="showRevenueByYear()">Revenue by Year</div>
+        <div id="revenueByCategoryLink" onclick="showRevenueByCategory()">Revenue by Category</div>
+    </div>
+    <div id="revenueByYear">
+        <div id="revenueByYearLineChart"></div>
+    </div>
+    <div id="revenueByCategory">
+        <div id="styleChooser">
+            <div id="revenueByCategoryColumnChartLink" class="active" onclick="showRevenueByCategoryColumnChart()">Column Chart</div>
+            <div id="revenueByCategoryPieChartLink" onclick="showRevenueByCategoryPieChart()">Pie Chart</div>
+        </div>
+        <div id="revenueByCategoryColumnChart"></div>
+        <div id="revenueByCategoryPieChart"></div>
+    </div>
+</div>

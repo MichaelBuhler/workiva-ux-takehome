@@ -71,3 +71,31 @@
     }
 
 })();
+
+function showRevenueByYear () {
+    document.getElementById('revenueByYear').style.display = 'block';
+    document.getElementById('revenueByYearLink').className = 'active';
+    document.getElementById('revenueByCategory').style.display = 'none';
+    document.getElementById('revenueByCategoryLink').className = '';
+}
+
+function showRevenueByCategory () {
+    document.getElementById('revenueByYear').style.display = 'none';
+    document.getElementById('revenueByYearLink').className = '';
+    document.getElementById('revenueByCategory').style.display = 'block';
+    document.getElementById('revenueByCategoryLink').className = 'active';
+}
+
+function showRevenueByCategoryColumnChart () {
+    document.getElementById('revenueByCategoryColumnChart').style.display = 'block';
+    document.getElementById('revenueByCategoryColumnChartLink').className = 'active';
+    document.getElementById('revenueByCategoryPieChart').style.display = 'none';
+    document.getElementById('revenueByCategoryPieChartLink').className = '';
+}
+
+function showRevenueByCategoryPieChart () {
+    document.getElementById('revenueByCategoryColumnChart').style.display = 'none';
+    document.getElementById('revenueByCategoryColumnChartLink').className = '';
+    document.getElementById('revenueByCategoryPieChart').style.display = 'block';
+    document.getElementById('revenueByCategoryPieChartLink').className = 'active';
+}
