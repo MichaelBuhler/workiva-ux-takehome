@@ -12,11 +12,14 @@
     <script type="text/javascript" src="/js/pages/<%=__page.template%>.js"></script>
 </head>
 <body>
-    <%- include('components/header'); %>
-    <%- include('components/nav'); %>
-    <div id="content">
+    <div id="header" class="wrapper">
+        <%- include('components/header'); %>
+    </div>
+    <div id="content" class="wrapper">
         <%- include('pages/'+__page.template); %>
     </div>
-    <%- include('components/footer'); %>
+    <div id="footer" class="wrapper">
+        <%- include('components/footer'); %>
+    </div>
 </body>
 </html>
