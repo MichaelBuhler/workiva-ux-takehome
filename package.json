@@ -14,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/MichaelBuhler/workiva-ux-takehome/issues"
   },
-  "homepage": "https://github.com/MichaelBuhler/workiva-ux-takehome#readme"
+  "homepage": "https://github.com/MichaelBuhler/workiva-ux-takehome#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
 }
