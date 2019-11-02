@@ -6,17 +6,6 @@ div#widget div#return-link {
     float: right;
 }
 
-div#widget h2#widget-name span.widget-id {
-    background-color: #eeeeee;
-    font-family: monospace;
-    font-size: smaller;
-    padding: 2px;
-}
-
-div#widget p#widget-description {
-
-}
-
 div#widget table#widget-details td.label {
     font-weight: bold;
     padding-right: 12px;

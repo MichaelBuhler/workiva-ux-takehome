@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Alert } from 'react-bootstrap';
+import { Alert, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import Loading from './Loading';
@@ -37,7 +37,8 @@ export default class extends React.Component {
                     <Link to="/widgets">Return to Widget List</Link>
                 </div>
                 <h2 id="widget-name">
-                    {widget.name} <span className="widget-id">id: {widget.id}</span>
+                    {widget.name}{' '}
+                    <Badge variant="secondary" className="text-monospace">{widget.id}</Badge>
                 </h2>
                 <p id="widget-description">
                     {widget.description}
