@@ -3,6 +3,8 @@ import React from 'react';
 import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
+import RevenueByYearLineChart from './RevenueByYearLineChart';
+
 import './Revenue.css';
 
 export default class extends React.Component {
@@ -22,7 +24,7 @@ export default class extends React.Component {
                             <Button as="div" variant="light" onClick={navigate('/revenue/category')}>By Category</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    Year
+                    <RevenueByYearLineChart/>
                 </Route>
                 <Redirect exact from="/revenue/category" to="/revenue/category/column"/>
                 <Route exact path="/revenue/category/column">
