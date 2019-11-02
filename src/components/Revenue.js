@@ -5,6 +5,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 import RevenueByYearLineChart from './RevenueByYearLineChart';
 import RevenueByCategoryColumnChart from './RevenueByCategoryColumnChart';
+import RevenueByCategoryPieChart from './RevenueByCategoryPieChart';
 
 import './Revenue.css';
 
@@ -52,7 +53,7 @@ export default class extends React.Component {
                             <Button as="div" variant="primary">Pie Chart</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    Category Pie
+                    <RevenueByCategoryPieChart/>
                 </Route>
                 <Redirect to="/revenue"/>
             </Switch>
