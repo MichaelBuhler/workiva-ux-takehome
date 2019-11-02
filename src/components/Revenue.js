@@ -4,6 +4,7 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import RevenueByYearLineChart from './RevenueByYearLineChart';
+import RevenueByCategoryColumnChart from './RevenueByCategoryColumnChart';
 
 import './Revenue.css';
 
@@ -38,7 +39,7 @@ export default class extends React.Component {
                             <Button as="div" variant="light" onClick={navigate('/revenue/category/pie')}>Pie Chart</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    Category Column
+                    <RevenueByCategoryColumnChart/>
                 </Route>
                 <Route exact path="/revenue/category/pie">
                     <ButtonToolbar>

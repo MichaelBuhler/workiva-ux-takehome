@@ -11,6 +11,15 @@ const fetchWidgets = () => {
 };
 
 export default class {
+    static async getRevenueByCategory () {
+        const widgets = await fetchWidgets();
+        return  widgets.reduce((acc, widget) => {
+            const category = widget.category;
+            acc[category] = acc[category] || 0;
+            acc[category] += widget.revenue;
+            return acc;
+        }, {});
+    }
     static async getRevenueByYear () {
         const widgets = await fetchWidgets();
         return widgets.reduce((acc, widget) => {
