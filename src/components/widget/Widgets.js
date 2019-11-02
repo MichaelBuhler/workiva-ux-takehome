@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Col, Row } from 'react-bootstrap';
 
-import WidgetService from '../services/WidgetService';
+import WidgetService from '../../services/WidgetService';
 
-import Loading from './Loading';
+import Loading from '../Loading';
 import WidgetCard from './WidgetCard';
 
 import './Widgets.css';

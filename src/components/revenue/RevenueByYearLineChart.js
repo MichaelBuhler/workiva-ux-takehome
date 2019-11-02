@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Chart } from 'react-google-charts';
 
-import WidgetService from '../services/WidgetService';
+import WidgetService from '../../services/WidgetService';
 
-import Loading from './Loading';
+import Loading from '../Loading';
 
 export default class extends React.Component {
     constructor (props) {

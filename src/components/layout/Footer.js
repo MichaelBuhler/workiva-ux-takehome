@@ -1,6 +1,6 @@
 import React from 'react';
 
-import siteSettings from '../site-settings';
+import siteSettings from '../../site-settings';
 
 import "./Footer.css"
 

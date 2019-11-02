@@ -3,9 +3,9 @@ import React from 'react';
 import { Alert, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import WidgetService from '../services/WidgetService';
+import WidgetService from '../../services/WidgetService';
 
-import Loading from './Loading';
+import Loading from '../Loading';
 
 import './Widget.css';
 

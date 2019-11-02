@@ -3,9 +3,9 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Navigation from './Navigation';
-import Widget from './Widget';
-import Widgets from './Widgets';
-import Revenue from './Revenue';
+import Widget from '../widget/Widget';
+import Widgets from '../widget/Widgets';
+import Revenue from '../revenue/Revenue';
 
 import './Container.css';
 

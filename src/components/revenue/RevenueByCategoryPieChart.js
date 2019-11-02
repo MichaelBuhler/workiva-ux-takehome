@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Chart } from 'react-google-charts';
 
-import WidgetService from '../services/WidgetService';
+import WidgetService from '../../services/WidgetService';
 
-import Loading from './Loading';
+import Loading from '../Loading';
 
 export default class extends React.Component {
     constructor (props) {
@@ -29,6 +29,6 @@ export default class extends React.Component {
         const { height, width } = this.props;
         const { ...rest } = this.props;
         const { loading, data } = this.state;
-        return loading ? <Loading height={height} width={width} /> : <Chart chartType="ColumnChart" data={data} {...rest}/>
+        return loading ? <Loading height={height} width={width} /> : <Chart chartType="PieChart" data={data} {...rest}/>
     }
 }
