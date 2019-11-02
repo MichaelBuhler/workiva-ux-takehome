@@ -26,11 +26,6 @@ div#header div#nav ul li:hover {
     border-top: 3px solid #77dd00;
 }
 
-div#content {
-    background-color: #ffffff;
-    padding: 10px;
-}
-
 div#footer {
     font-size: small;
     padding: 10px 0;
