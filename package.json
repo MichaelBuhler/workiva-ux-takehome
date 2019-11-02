@@ -1,9 +1,32 @@
 {
   "name": "workiva-ux-takehome",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "repository": {
     "type": "git",
@@ -14,9 +37,5 @@
   "bugs": {
     "url": "https://github.com/MichaelBuhler/workiva-ux-takehome/issues"
   },
-  "homepage": "https://github.com/MichaelBuhler/workiva-ux-takehome#readme",
-  "dependencies": {
-    "ejs": "^2.7.1",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/MichaelBuhler/workiva-ux-takehome#readme"
 }
