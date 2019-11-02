@@ -14,7 +14,7 @@ export default class extends React.Component {
         super(props);
         this.state = {
             loading: true,
-            widgets: []
+            widgets: null
         };
     }
     async componentDidMount () {
@@ -25,18 +25,15 @@ export default class extends React.Component {
         });
     }
     render () {
-        if (this.state.loading) {
-            return <Loading/>
-        }
-        const widgets = this.state.widgets.map(widget => {
-            return <Col md={4} sm={6} xs={12} key={widget.id}>
-                <WidgetCard widget={widget}/>
-            </Col>
-        });
-        return <div id="widgets">
+        const { loading, widgets } = this.state;
+        return loading ? <Loading/> : <div id="widgets">
             <Container>
                 <Row noGutters>
-                    {widgets}
+                    {widgets.map(widget => {
+                        return <Col md={4} sm={6} xs={12} key={widget.id}>
+                            <WidgetCard widget={widget}/>
+                        </Col>
+                    })}
                 </Row>
             </Container>
         </div>

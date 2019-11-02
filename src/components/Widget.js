@@ -26,52 +26,46 @@ export default class extends React.Component {
     }
     render () {
         const { loading, widget } = this.state;
-        if (loading) {
-            return <Loading/>
-        }
-        if (widget) {
-            return <div id="widget">
-                <div id="return-link">
-                    <Link to="/widgets">Return to Widget List</Link>
-                </div>
-                <h2 id="widget-name">
-                    {widget.name}{' '}
-                    <Badge variant="secondary" className="text-monospace">{widget.id}</Badge>
-                </h2>
-                <p id="widget-description">
-                    {widget.description}
-                </p>
-                <table id="widget-details">
-                    <tbody>
-                        <tr>
-                            <td className="label">
-                                Category
-                            </td>
-                            <td>
-                                {widget.category}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="label">
-                                Revenue
-                            </td>
-                            <td>
-                                <span className="money">{widget.revenue}</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="label">
-                                Timestamp
-                            </td>
-                            <td>
-                                {widget.timestamp}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        return loading ? <Loading/> : widget ? <div id="widget">
+            <div id="return-link">
+                <Link to="/widgets">Return to Widget List</Link>
             </div>
-        }
-        return <div id="widget">
+            <h2 id="widget-name">
+                {widget.name}{' '}
+                <Badge variant="secondary" className="text-monospace">{widget.id}</Badge>
+            </h2>
+            <p id="widget-description">
+                {widget.description}
+            </p>
+            <table id="widget-details">
+                <tbody>
+                <tr>
+                    <td className="label">
+                        Category
+                    </td>
+                    <td>
+                        {widget.category}
+                    </td>
+                </tr>
+                <tr>
+                    <td className="label">
+                        Revenue
+                    </td>
+                    <td>
+                        <span className="money">{widget.revenue}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="label">
+                        Timestamp
+                    </td>
+                    <td>
+                        {widget.timestamp}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div> : <div id="widget">
             <Alert variant="danger">Widget not found!</Alert>
         </div>
     }
