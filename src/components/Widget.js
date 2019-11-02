@@ -3,9 +3,9 @@ import React from 'react';
 import { Alert, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import Loading from './Loading';
+import WidgetService from '../services/WidgetService';
 
-import widgetData from '../widget-data';
+import Loading from './Loading';
 
 import './Widget.css';
 
@@ -17,14 +17,12 @@ export default class extends React.Component {
             widget: null
         };
     }
-    componentDidMount () {
-        // TODO abstract into service call
-        setTimeout(() => {
-            this.setState({
-                loading: false,
-                widget: widgetData.find(widget => widget.id === this.props.match.params.id)
-            })
-        }, 300);
+    async componentDidMount () {
+        const widget = await WidgetService.getWidget(this.props.match.params.id);
+        this.setState({
+            loading: false,
+            widget: widget
+        });
     }
     render () {
         const { loading, widget } = this.state;
