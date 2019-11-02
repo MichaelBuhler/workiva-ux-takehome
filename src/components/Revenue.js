@@ -26,7 +26,7 @@ export default class extends React.Component {
                             <Button as="div" variant="light" onClick={navigate('/revenue/category')}>By Category</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    <RevenueByYearLineChart/>
+                    <RevenueByYearLineChart height="400px" width="100%"/>
                 </Route>
                 <Redirect exact from="/revenue/category" to="/revenue/category/column"/>
                 <Route exact path="/revenue/category/column">
@@ -40,7 +40,7 @@ export default class extends React.Component {
                             <Button as="div" variant="light" onClick={navigate('/revenue/category/pie')}>Pie Chart</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    <RevenueByCategoryColumnChart/>
+                    <RevenueByCategoryColumnChart height="400px" width="100%" options={{legend:'none'}}/>
                 </Route>
                 <Route exact path="/revenue/category/pie">
                     <ButtonToolbar>
@@ -53,7 +53,7 @@ export default class extends React.Component {
                             <Button as="div" variant="primary">Pie Chart</Button>
                         </ButtonGroup>
                     </ButtonToolbar>
-                    <RevenueByCategoryPieChart/>
+                    <RevenueByCategoryPieChart height="400px" width="100%"/>
                 </Route>
                 <Redirect to="/revenue"/>
             </Switch>

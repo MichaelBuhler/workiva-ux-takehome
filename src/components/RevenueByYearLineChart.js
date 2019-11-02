@@ -26,7 +26,8 @@ export default class extends React.Component {
         })
     }
     render () {
+        const { ...rest } = this.props;
         const { loading, data } = this.state;
-        return loading ? <Loading/> : <Chart chartType="LineChart" data={data}/>
+        return loading ? <Loading/> : <Chart chartType="LineChart" data={data} {...rest}/>
     }
 }
