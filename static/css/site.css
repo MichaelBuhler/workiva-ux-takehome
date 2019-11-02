@@ -25,9 +25,3 @@ div#header div#nav ul li.active {
 div#header div#nav ul li:hover {
     border-top: 3px solid #77dd00;
 }
-
-div#footer {
-    font-size: small;
-    padding: 10px 0;
-    text-align: center;
-}
