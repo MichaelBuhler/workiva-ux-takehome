@@ -1,0 +1,55 @@
+a.widget-card {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.widget-card > div {
+    margin: 7px;
+    user-select: none;
+}
+
+a.widget-card > div > div {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+    padding: 1px 5px;
+}
+
+a.widget-card > div > div.top {
+    background-color: #0094ff;
+    border-left: 1px solid #0094ff;
+    border-right: 1px solid #0094ff;
+    border-top: 1px solid #0094ff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 5px;
+}
+
+a.widget-card > div > div.bottom {
+    border-bottom: 1px solid #444444;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+a.widget-card:hover > div > div.top {
+    background-color: #00bbff;
+    border-left: 1px solid #00bbff;
+    border-right: 1px solid #00bbff;
+    border-top: 1px solid #00bbff;
+}
+
+a.widget-card > div > div > span.label {
+    font-weight: bold;
+}
+
+a.widget-card > div > div > span.value {
+    display: block;
+    float: right;
+}
+
+a.widget-card > div > div > span.value > span.money:before {
+    content: '$'
+}
+
+a.widget-card > div > div > span.value > span.money:after {
+    content: '.00'
+}

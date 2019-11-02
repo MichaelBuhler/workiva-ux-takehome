@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 
 import Loading from './Loading';
+import WidgetCard from './WidgetCard';
 
 import widgetData from '../widget-data';
 
@@ -31,6 +32,7 @@ export default class extends React.Component {
         }
         const widgets = this.state.widgets.map(widget => {
             return <Col md={4} sm={6} xs={12} key={widget.id}>
+                <WidgetCard widget={widget}/>
             </Col>
         });
         return <div id="widgets">
