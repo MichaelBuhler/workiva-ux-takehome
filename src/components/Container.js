@@ -12,5 +12,13 @@ export default class extends React.Component {
     render () {
         return <div id="container">
             <Navigation/>
+            <div className="content">
+                <Switch>
+                    <Redirect exact from="/" to="/widgets"/>
+                    <Route exact path="/widgets" component={Widgets}/>
+                    <Redirect to="/widgets"/>
+                </Switch>
+            </div>
+        </div>
     }
 }
