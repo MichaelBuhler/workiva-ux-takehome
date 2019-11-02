@@ -1,18 +1,24 @@
 import React from 'react';
-import './App.css';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Header from './components/Header';
-import Content from './components/Content';
+import Container from './components/Container';
 import Footer from './components/Footer';
 
-export default class App extends React.Component {
+import './App.css';
+
+export default class extends React.Component {
     render () {
-        return (
-            <div>
+        return <Router>
+            <div className="wrapper">
                 <Header/>
-                <Content/>
+            </div>
+            <div className="wrapper">
+            </div>
+            <div className="wrapper">
                 <Footer/>
             </div>
-        );
+        </Router>
     }
 }
