@@ -15,6 +15,7 @@ export default class extends React.Component {
                 <Header/>
             </div>
             <div className="wrapper">
+                <Container/>
             </div>
             <div className="wrapper">
                 <Footer/>
