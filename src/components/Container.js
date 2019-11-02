@@ -16,6 +16,7 @@ export default class extends React.Component {
                 <Switch>
                     <Redirect exact from="/" to="/widgets"/>
                     <Route exact path="/widgets" component={Widgets}/>
+                    <Route path="/widgets/:id" component={Widget}/>
                     <Redirect to="/widgets"/>
                 </Switch>
             </div>
