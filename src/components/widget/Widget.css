@@ -1,0 +1,19 @@
+div#widget {
+    padding: 15px;
+}
+
+div#widget div#return-link {
+    float: right;
+}
+
+div#widget table#widget-details td.label {
+    font-weight: bold;
+    padding-right: 12px;
+}
+
+div#widget table#widget-details td span.money:before {
+    content: "$";
+}
+div#widget table#widget-details td span.money:after {
+    content: ".00";
+}

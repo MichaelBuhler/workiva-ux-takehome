@@ -1,26 +1,20 @@
-div#widgets div.clearfix {
-    clear: both;
-}
-
-div#widgets a {
+a.widget-card {
     color: #000000;
     text-decoration: none;
 }
 
-div#widgets a div.widget-card {
-    float: left;
-    margin: 10px 13px;
+a.widget-card > div {
+    margin: 7px;
     user-select: none;
-    width: 200px;
 }
 
-div#widgets a div.widget-card div {
+a.widget-card > div > div {
     border-left: 1px solid #444444;
     border-right: 1px solid #444444;
     padding: 1px 5px;
 }
 
-div#widgets a div.widget-card div.top {
+a.widget-card > div > div.top {
     background-color: #0094ff;
     border-left: 1px solid #0094ff;
     border-right: 1px solid #0094ff;
@@ -30,32 +24,32 @@ div#widgets a div.widget-card div.top {
     padding: 5px;
 }
 
-div#widgets a div.widget-card div.bottom {
+a.widget-card > div > div.bottom {
     border-bottom: 1px solid #444444;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-div#widgets a:hover div.widget-card div.top {
+a.widget-card:hover > div > div.top {
     background-color: #00bbff;
     border-left: 1px solid #00bbff;
     border-right: 1px solid #00bbff;
     border-top: 1px solid #00bbff;
 }
 
-div#widgets a div.widget-card div span.label {
+a.widget-card > div > div > span.label {
     font-weight: bold;
 }
 
-div#widgets a div.widget-card div span.value {
+a.widget-card > div > div > span.value {
     display: block;
     float: right;
 }
 
-div#widgets a div.widget-card div span.value span.money:before {
+a.widget-card > div > div > span.value > span.money:before {
     content: '$'
 }
 
-div#widgets a div.widget-card div span.value span.money:after {
+a.widget-card > div > div > span.value > span.money:after {
     content: '.00'
 }
