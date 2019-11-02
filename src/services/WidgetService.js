@@ -1,4 +1,4 @@
-import widgetData from '../widget-data';
+import widgetData from './widget-data';
 
 const SIMULATED_DELAY = 300;
 
