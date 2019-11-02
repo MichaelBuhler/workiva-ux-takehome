@@ -6,7 +6,8 @@ import './Loading.css';
 
 export default class extends React.Component {
     render () {
-        return <div id="loading">
+        const { height, width } = this.props;
+        return <div id="loading" style={{height, width}}>
             <Spinner animation="border"/>
         </div>
     }

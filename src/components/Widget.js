@@ -26,7 +26,7 @@ export default class extends React.Component {
     }
     render () {
         const { loading, widget } = this.state;
-        return loading ? <Loading/> : widget ? <div id="widget">
+        return loading ? <Loading height="200px"/> : widget ? <div id="widget">
             <div id="return-link">
                 <Link to="/widgets">Return to Widget List</Link>
             </div>

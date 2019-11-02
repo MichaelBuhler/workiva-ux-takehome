@@ -26,8 +26,9 @@ export default class extends React.Component {
         })
     }
     render () {
+        const { height, width } = this.props;
         const { ...rest } = this.props;
         const { loading, data } = this.state;
-        return loading ? <Loading/> : <Chart chartType="LineChart" data={data} {...rest}/>
+        return loading ? <Loading height={height} width={width} /> : <Chart chartType="LineChart" data={data} {...rest}/>
     }
 }

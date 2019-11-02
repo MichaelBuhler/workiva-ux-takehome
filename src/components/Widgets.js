@@ -26,7 +26,7 @@ export default class extends React.Component {
     }
     render () {
         const { loading, widgets } = this.state;
-        return loading ? <Loading/> : <div id="widgets">
+        return loading ? <Loading height="300px"/> : <div id="widgets">
             <Container>
                 <Row noGutters>
                     {widgets.map(widget => {
