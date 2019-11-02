@@ -17,7 +17,7 @@ export default class extends React.Component {
                 <Redirect exact from="/revenue" to="/revenue/year"/>
                 <Route exact path="/revenue/year">
                     <ButtonToolbar>
-                        <ButtonGroup className="mr-2">
+                        <ButtonGroup>
                             <Button as="div" variant="primary">By Year</Button>
                             <Button as="div" variant="light" onClick={navigate('/revenue/category')}>By Category</Button>
                         </ButtonGroup>
@@ -27,11 +27,11 @@ export default class extends React.Component {
                 <Redirect exact from="/revenue/category" to="/revenue/category/column"/>
                 <Route exact path="/revenue/category/column">
                     <ButtonToolbar>
-                        <ButtonGroup className="mr-2">
+                        <ButtonGroup>
                             <Button as="div" variant="light" onClick={navigate('/revenue/year')}>By Year</Button>
                             <Button as="div" variant="primary">By Category</Button>
                         </ButtonGroup>
-                        <ButtonGroup>
+                        <ButtonGroup className="ml-2">
                             <Button as="div" variant="primary">Column Chart</Button>
                             <Button as="div" variant="light" onClick={navigate('/revenue/category/pie')}>Pie Chart</Button>
                         </ButtonGroup>
@@ -40,11 +40,11 @@ export default class extends React.Component {
                 </Route>
                 <Route exact path="/revenue/category/pie">
                     <ButtonToolbar>
-                        <ButtonGroup className="mr-2">
+                        <ButtonGroup>
                             <Button as="div" variant="light" onClick={navigate('/revenue/year')}>By Year</Button>
                             <Button as="div" variant="primary">By Category</Button>
                         </ButtonGroup>
-                        <ButtonGroup>
+                        <ButtonGroup className="ml-2">
                             <Button as="div" variant="light" onClick={navigate('/revenue/category/column')}>Column Chart</Button>
                             <Button as="div" variant="primary">Pie Chart</Button>
                         </ButtonGroup>
